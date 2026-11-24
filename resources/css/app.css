@@ -1,0 +1,15 @@
+/* resources/scss/app.scss*/
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+/*@import 'tailwind.min.css';*/
+
+@import './stylo';
+@import './quemsomos';
+@import './curriculum';
+@import './animacao';
+@import './abas';
+
+[x-cloak] {
+    display: none;
+}

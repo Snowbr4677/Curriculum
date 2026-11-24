@@ -1,0 +1,365 @@
+DOCUMENTAÇÃO DO PROJETO: PORTFÓLIO DE CURRÍCULOS
+Escola Dona Zalina Rolim
+
+DATA DA DOCUMENTAÇÃO
+24/11/2026
+
+1. OBJETIVO DO PROJETO
+
+Este projeto apresenta uma página pública para consultar os currículos de estudantes
+da Escola Dona Zalina Rolim. O objetivo é reunir nome, foto, descrição profissional,
+formação, cursos, experiências e dados de contato em uma experiência simples,
+organizada e acessível pelo navegador.
+
+O sistema foi desenvolvido como uma aplicação web, utilizando Laravel para rotas,
+controladores e renderização das páginas, Blade para a montagem das views, Tailwind
+CSS e CSS próprio para o layout, Vite para os recursos frontend e DomPDF para gerar
+os currículos em PDF.
+
+O foco desta versão é o portfólio dos alunos. Recursos administrativos existentes
+no projeto base não aparecem na navegação pública e não são necessários para esta
+apresentação.
+
+
+2. ARQUIVO ORIGINAL DO TCC
+
+O arquivo fornecido para revisão foi mantido intacto:
+
+doc/TCC — Currículo Web (E.E. Zalina Rolim).pdf
+
+Não alteramos, renomeamos ou removemos o PDF original. Este arquivo TXT é um
+complemento técnico e não substitui o documento do TCC.
+
+
+3. TECNOLOGIAS UTILIZADAS
+
+- PHP 8.2 ou superior
+- Laravel 11
+- Blade
+- Tailwind CSS
+- Alpine.js
+- Vite
+- DomPDF para exportação em PDF
+- MySQL/MariaDB para recursos gerais do projeto base
+- HTML5 e CSS3
+- JavaScript
+- Git e GitHub para versionamento
+
+
+4. ESTRUTURA PRINCIPAL
+
+Página inicial:
+resources/views/welcome.blade.php
+
+Página Quem Somos:
+resources/views/site/quemsomos.blade.php
+
+Currículos dos estudantes:
+resources/views/site/curriculum/pedro.blade.php
+resources/views/site/curriculum/yas.blade.php
+resources/views/site/curriculum/bruno.blade.php
+resources/views/site/curriculum/gui.blade.php
+resources/views/site/curriculum/dri.blade.php
+resources/views/site/curriculum/herlan.blade.php
+
+Fotos dos estudantes:
+public/imgs/sistema/alunos/
+
+Imagens gerais do projeto:
+public/imgs/sistema/
+
+Estilos dos currículos:
+resources/css/curriculum.css
+
+Estilos gerais:
+resources/css/stylo.css
+resources/css/quemsomos.css
+
+Controlador das páginas públicas:
+app/Http/Controllers/site/SiteController.php
+
+Controlador da geração de PDF:
+app/Http/Controllers/pdfs/PdfsController.php
+
+Definição das rotas:
+routes/web.php
+
+Configuração do nome da escola:
+config/app.php
+
+
+5. FLUXO PRINCIPAL DA APLICAÇÃO
+
+1. O usuário abre a página inicial.
+2. A página inicial apresenta o nome da escola, a imagem principal e o botão
+   "Conhecer os alunos".
+3. O usuário entra na página Quem Somos.
+4. A página mostra seis cards, um para cada estudante.
+5. Cada card possui nome, foto, resumo e área de interesse destacada ao passar o
+   mouse ou ao usar o teclado.
+6. Ao clicar na foto ou no nome do estudante, o sistema abre o currículo completo.
+7. O currículo apresenta cabeçalho da escola, foto, dados pessoais ou de contato,
+   objetivo, formação, cursos e experiências.
+8. O botão "Salvar currículo em PDF" abre a versão em PDF em nova aba.
+9. O botão "Voltar" permite retornar à página anterior.
+
+
+6. ROTAS IMPORTANTES
+
+Página inicial:
+/ ou nome definido pela rota raiz
+
+Quem Somos:
+/site/quemsomos
+
+Currículos:
+/site/curriculum/pedro
+/site/curriculum/yas
+/site/curriculum/bruno
+/site/curriculum/gui
+/site/curriculum/dri
+/site/curriculum/herlan
+
+Geração de PDF:
+/gerapdf/pedro
+/gerapdf/yas
+/gerapdf/bruno
+/gerapdf/gui
+/gerapdf/dri
+/gerapdf/herlan
+
+Os controladores públicos possuem uma lista fechada dos currículos válidos. Assim,
+tentativas de informar outro nome na URL recebem página não encontrada em vez de
+exposição para outros arquivos do projeto.
+
+
+7. ESTUDANTES CADASTRADOS
+
+- Pedro Aguiar
+- Yasmim Gameleira
+- Bruno Leite
+- Guilherme Souza
+- Adrieli Bernal
+- Herlan Daner Palma Condori
+
+O projeto mantém os dados que os estudantes forneceram nos repositórios. Alguns
+endereços, contatos, nomes de áreas ou informações podem ser fictícios ou servirem
+como exemplo. Antes de uma apresentação pública real, os dados pessoais devem ser
+revisados pelos responsáveis pelos estudantes.
+
+
+8. DECISÕES DE INTERFACE
+
+A página inicial foi simplificada para uma apresentação pública direta.
+
+A página Quem Somos utiliza um cabeçalho escuro fixo no topo, a identidade visual
+da escola e cards organizados em duas colunas no computador e uma coluna no celular.
+
+Os nomes dos alunos usam negrito e uma linha verde como separador. As fotos ficam
+em círculos próprios e não vazam das bordas dos cards.
+
+Ao passar o mouse ou obter foco pelo teclado, o card mostra uma breve informação
+adicional sobre área de interesse ou idiomas.
+
+Os currículos usam fundo amarelo claro inspirado na identidade original do projeto,
+com uma folha central clara para facilitar a leitura e um cabeçalho escuro com o nome
+da escola.
+
+O botão de PDF utiliza uma cor verde e uma descrição completa. O botão Voltar usa
+fundo branco, borda discreta e seta para indicar a ação.
+
+
+9. COMO EXECUTAR LOCALMENTE
+
+Instalar dependências PHP:
+composer install
+
+Instalar dependências JavaScript:
+npm install
+
+Copiar o ambiente:
+copy .env.example .env
+
+Gerar chave:
+php artisan key:generate
+
+Compilar o frontend:
+npm run build
+
+Iniciar o servidor Laravel:
+php artisan serve
+
+Se estiver usando XAMPP e Apache, aponte o servidor para a pasta public. Configure
+o banco MySQL apenas para recursos que dependam dele. A página pública pode ser
+acessada mesmo sem autenticação.
+
+A porta usada nos testes desta versão foi:
+http://127.0.0.1:8765
+
+
+10. ROTEIRO SUGERIDO PARA APRESENTAÇÃO
+
+Primeira etapa - problema:
+Explique por que os currículos poderiam ficar dispersos em arquivos separados e
+como uma página centralizada facilita a consulta.
+
+Segunda etapa - público:
+Apresente o público-alvo: estudantes, escola, professores, responsáveis e possíveis
+empregadores.
+
+Terceira etapa - demonstração:
+1. Abra a página inicial.
+2. Clique em "Conhecer os alunos".
+3. Passe o mouse sobre um card e explique a área de interesse.
+4. Clique em um currículo.
+5. Percorra objetivo, formação, cursos e experiências.
+6. Abra o botão "Salvar currículo em PDF".
+7. Use o botão "Voltar" para retornar.
+
+Quarta etapa - arquitetura:
+Mostre o fluxo: navegador -> rota -> controlador -> view Blade -> CSS/Vite -> HTML,
+com DomPDF usado na geração do currículo.
+
+Quinta etapa - desenvolvimento:
+Mostre como o projeto usa reutilização de componentes, imagens públicas, arquivos
+Blade separados por estudante e controle das páginas públicas permitidas.
+
+Sexta etapa - qualidade:
+Exiba os testes de status das páginas, a visualização no navegador e a adaptação
+para celular.
+
+Sétima etapa - próximos passos:
+Apresente melhoria de dados reais, busca opcional, acessibilidade, testes automáticos
+e painel administrativo somente se necessário.
+
+
+11. PERGUNTAS QUE PODEM SURGIR NA APRESENTAÇÃO
+
+Por que Laravel?
+Porque separa rotas, controladores e páginas, facilita manutenção e permite usar
+Blade sem duplicar a estrutura inteira em cada página.
+
+Por que Blade?
+Porque permite reaproveitar HTML, configurar textos por aplicação e integrar dados
+diretamente às views.
+
+Por que DomPDF?
+Porque gera uma versão em PDF a partir do mesmo currículo exibido no navegador,
+reduzindo duplicação de layout.
+
+Como os currículos são encontrados?
+O navegador chama uma rota pública com o nome do estudante. O controlador valida
+esse nome e retorna apenas uma das views cadastradas.
+
+Como as fotos são carregadas?
+As fotos ficam em public/imgs/sistema/alunos e são referenciadas pelas views com
+asset(), que gera o endereço público correspondente.
+
+Como o projeto funciona no celular?
+As grades mudam de duas colunas para uma coluna por meio das regras CSS responsivas.
+
+Como o projeto evita páginas indevidas?
+Uma lista fechada de nomes válidos é usada no controlador de currículo e no
+controlador de PDF.
+
+
+12. PONTOS DE ATENÇÃO ANTES DE UMA ENTREGA REAL
+
+- Revisar todas as informações pessoais fornecidas pelos estudantes.
+- Confirmar nomes, telefones, endereços e endereços de e-mail.
+- Substituir dados fictícios ou improvisados por dados reais somente com autorização.
+- Revisar ortografia e consistência dos objetivos e experiências.
+- Testar o PDF dos seis currículos no navegador.
+- Testar o projeto em celular e em telas menores.
+- Testar o botão Voltar em todas as páginas.
+- Verificar se as imagens têm qualidade suficiente e formato apropriado.
+- Confirmar os requisitos do ambiente: PHP, Composer, Node.js e MySQL.
+- Não enviar o arquivo .env ou credenciais reais em GitHub ou arquivos compactados.
+- Não enviar vendor/, node_modules/, public/build/, storage/logs/ ou caches.
+
+
+13. IDEIAS PARA MELHORAR NO FUTUDO
+
+- Inserir uma área "Sobre a escola" com missão, curso técnico e recursos.
+- Criar uma página individual clara para cada aluno e padronizar todas as seções.
+- Adicionar uma versão em inglês dos currículos.
+- Permitir que os alunos atualizem seus dados por um painel protegido.
+- Guardar currículos em banco de dados em vez de HTML fixo.
+- Criar autenticação somente para edição; manter a consulta pública.
+- Gerar miniaturas otimizadas das fotos.
+- Adicionar texto alternativo específico para cada foto.
+- Criar testes automáticos para verificar a existência dos seis currículos.
+- Criar testes HTTP para validar página inicial, Quem Somos e PDFs.
+- Melhorar o PDF para incluir marca da escola e quebra de página adequada.
+- Criar uma impressão responsiva separada da tela.
+- Criar uma apresentação curta em vídeo ou slides usando as próprias telas do projeto.
+- Adicionar estatísticas simples, como quantidade de alunos e áreas de interesse.
+- Respeitar preferência de movimento reduzido no efeito hover dos cards.
+
+
+14. OTIMIZAÇÕES FEITAS NESTA ETAPA
+
+- Removidos currículos antigos de Eddie, Edson e JM.
+- Removidos recursos antigos de imagens de Eddie, Edson e JM.
+- Removido um controlador de Pessoas antigo sem uso.
+- Removidos atalhos e arquivos incompletos de download.
+- Removidas sessões temporárias e logs antigos de testes locais.
+- Login administrativo removido da página pública inicial.
+- Serviços, Portfólio, Chat e Bateria removidos da navegação pública quando não eram
+  parte da apresentação dos currículos.
+- Busca e filtros foram considerados desnecessários para seis alunos e não foram
+  mantidos na versão final pública.
+- Links dos currículos PDF configurados para abrir nova aba.
+- Controladores públicos limitados a uma lista fechada de currículos permitidos.
+- Botões substituídos por textos claros: "Salvar currículo em PDF" e "Voltar".
+- Comentários simples adicionados às classes e controladores principais.
+
+- Painel administrativo removido das rotas públicas deste projeto.
+- Views administrativas, controladores administrativos e diretórios relacionados
+  foram separados ou removidos porque não fazem parte do portfólio dos estudantes.
+- Recursos jurídicos, de processos, advogados, migrações legadas e imagens antigas
+  relacionadas a Edmilson, Eddie, Edson e JM foram removidos.
+- Os arquivos públicos mantidos são a página inicial, Quem Somos e os currículos.
+
+
+15. ENTREGA PARA GITHUB
+
+Arquivos apropriados para versionamento:
+
+- resources/views/welcome.blade.php
+- resources/views/site/quemsomos.blade.php
+- resources/views/site/curriculum/
+- resources/css/curriculum.css
+- resources/css/quemsomos.css
+- public/imgs/sistema/alunos/
+- public/imgs/sistema/programadores.png
+- public/imgs/sistema/zr2.png
+- app/Http/Controllers/site/SiteController.php
+- app/Http/Controllers/pdfs/PdfsController.php
+- routes/web.php
+- config/app.php
+- doc/Documentacao_do_projeto_curriculos.txt
+
+Pastas ou arquivos que não devem ser enviados:
+
+- vendor/
+- node_modules/
+- public/build/
+- storage/framework/views/
+- storage/framework/cache/
+- storage/framework/sessions/
+- storage/logs/
+- .env
+- arquivos temporários .bak, .tmp, .old ou partes .filepart
+
+
+16. CONCLUSÃO
+
+O projeto apresenta uma solução simples para centralizar currículos de estudantes
+em uma interface web organizada. A navegação começa na página inicial, passa pela
+lista de estudantes e termina em um currículo individual que pode ser salvo em PDF.
+
+A versão atual já possui identidade visual própria, conteúdo organizado,
+responsividade básica, navegação clara e separação dos currículos em arquivos
+Blade. Os próximos avanços devem priorizar dados reais, validação de informações,
+testes automáticos e aprimoramento da geração de PDF.
