@@ -38,8 +38,18 @@
                             <img src="{{ asset('imgs/sistema/alunos/jv.jpg') }}" alt="Imagem de perfil escolhida por João Victor" style="border-radius:50%;">
                         </div>
                         <div id="pessoal2" class="texto-esquerda cor1 text-[12px] z-10">
-                            <p class="phont2">Estudante do Ensino Médio integrado ao Técnico em Desenvolvimento de Sistemas</p>
-                            <p class="phont2">E.E. Dona Zalina Rolim</p>
+                            <p class="phont2 flex items-center gap-1">
+                                <img class="icon" width="14" src="{{ asset('imgs/icones/location-place.png') }}" alt="">
+                                José Bonifácio, Zona Leste — São Paulo - SP
+                            </p>
+                            <p class="phont2 flex items-center gap-1">
+                                <img class="icon" width="14" src="{{ asset('imgs/icones/phone-symbol.png') }}" alt="">
+                                (11) 98144-5860
+                            </p>
+                            <p class="phont2 flex items-center gap-1">
+                                <img class="icon" width="14" src="{{ asset('imgs/icones/mail-email.png') }}" alt="">
+                                ovictor.stos@gmail.com
+                            </p>
                         </div>
                     </div>
                     <hr class="mt-4">
