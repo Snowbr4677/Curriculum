@@ -53,6 +53,20 @@ class PdfsController extends Controller
             },
             $html
         );
+        $pdfStylesPath = resource_path('css/curriculum-pdf.css');
+        $pdfStyles = file_get_contents($pdfStylesPath);
+
+        if ($pdfStyles === false) {
+            throw new \RuntimeException("Unable to read PDF layout stylesheet: {$pdfStylesPath}");
+        }
+
+        $headEnd = stripos($html, '</head>');
+
+        if ($headEnd === false) {
+            throw new \RuntimeException('Curriculum view is missing its closing head tag.');
+        }
+
+        $html = substr_replace($html, "\n<style>\n{$pdfStyles}\n</style>\n", $headEnd, 0);
         $html = preg_replace_callback(
             '~\bsrc=(["\'])([^"\']+)\1~i',
             function (array $matches) use ($assetRoot): string {

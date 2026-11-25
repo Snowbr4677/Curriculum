@@ -1,0 +1,173 @@
+@page {
+    size: A4 portrait;
+    margin: 15mm 15mm 23mm;
+}
+
+html,
+body {
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.curriculum-page {
+    min-height: 0 !important;
+    color: #1f2937;
+    background: #fff !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    line-height: 1.4;
+}
+
+.curriculum-page > nav.bg-gray-800 {
+    position: static !important;
+    top: auto !important;
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 3mm 0 !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+.curriculum-page > nav.bg-gray-800 .container {
+    display: table !important;
+    width: 100% !important;
+    min-height: 0 !important;
+    height: auto !important;
+}
+
+.curriculum-page .curriculum-logo {
+    width: 42px !important;
+    height: 42px !important;
+}
+
+.curriculum-page .pdf-action,
+.curriculum-page .retorna {
+    display: none !important;
+}
+
+.curriculum-page .footer-tela,
+.curriculum-page .footer-repetir {
+    position: fixed !important;
+    right: 0;
+    bottom: -16mm;
+    left: 0;
+    width: 100%;
+    padding: 2mm 0;
+    background: #fff;
+    color: #64748b;
+    font-size: 8pt;
+    text-align: center;
+}
+
+.curriculum-page .curriculum-sheet {
+    width: auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 7mm 0 0 !important;
+    overflow: visible !important;
+    background: #fff !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    text-align: left !important;
+}
+
+.curriculum-page .curriculum-identidade {
+    margin: 0 0 5mm !important;
+    padding: 0 0 5mm !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    page-break-after: avoid;
+    break-after: avoid;
+}
+
+.curriculum-page .curriculum-identidade .row {
+    display: table !important;
+    width: 100% !important;
+    margin: 0 !important;
+    table-layout: fixed;
+}
+
+.curriculum-page .curriculum-identidade .row > .flex,
+.curriculum-page .curriculum-identidade .row > #image1,
+.curriculum-page .curriculum-identidade .row > #pessoal2 {
+    display: table-cell !important;
+    vertical-align: middle;
+}
+
+.curriculum-page .curriculum-identidade .row > .flex {
+    width: 29%;
+}
+
+.curriculum-page .curriculum-identidade .row > #image1 {
+    width: 20%;
+    text-align: center;
+}
+
+.curriculum-page .curriculum-identidade .row > #pessoal2 {
+    width: 51%;
+}
+
+.curriculum-page .curriculum-identidade #image1 img {
+    width: 82px !important;
+    height: 82px !important;
+    object-fit: cover;
+}
+
+.curriculum-page .curriculum-identidade #pessoal1 p,
+.curriculum-page .curriculum-identidade #pessoal2 p {
+    margin: 1mm 0 !important;
+    padding-top: 0 !important;
+    line-height: 1.3;
+}
+
+.curriculum-page .curriculum-identidade #pessoal1 .f-siga1 {
+    font-size: 18pt !important;
+}
+
+.curriculum-page .curriculum-identidade .phont2 {
+    font-size: 9pt !important;
+}
+
+.curriculum-page .curriculum-conteudo {
+    float: none !important;
+    clear: both;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 10pt;
+    line-height: 1.4;
+    text-align: justify !important;
+}
+
+.curriculum-page .curriculum-conteudo .f-cabeca1,
+.curriculum-page .curriculum-conteudo h1,
+.curriculum-page .curriculum-conteudo h2,
+.curriculum-page .curriculum-conteudo h3 {
+    margin: 5mm 0 2mm !important;
+    padding: 0 !important;
+    font-size: 12pt !important;
+    line-height: 1.25;
+    page-break-after: avoid;
+    break-after: avoid;
+}
+
+.curriculum-page .curriculum-conteudo p {
+    margin: 1mm 0 2mm !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    orphans: 3;
+    widows: 3;
+}
+
+.curriculum-page .curriculum-conteudo .f-entidade {
+    padding-top: 1mm !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+.curriculum-page hr {
+    margin: 2mm 0;
+}
