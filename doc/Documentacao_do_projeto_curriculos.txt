@@ -63,6 +63,7 @@ resources/views/site/curriculum/dri.blade.php
 resources/views/site/curriculum/herlan.blade.php
 resources/views/site/curriculum/alan.blade.php
 resources/views/site/curriculum/lucas.blade.php
+resources/views/site/curriculum/jv.blade.php
 
 Fotos dos estudantes:
 public/imgs/sistema/alunos/
@@ -96,7 +97,7 @@ config/app.php
 2. A página inicial apresenta o nome da escola, a imagem principal e o botão
    "Conhecer os alunos".
 3. O usuário entra na página Quem Somos.
-4. A página mostra oito cards, um para cada estudante.
+4. A página mostra nove cards, um para cada estudante.
 5. Cada card possui nome, foto, resumo e área de interesse destacada ao passar o
    mouse ou ao usar o teclado.
 6. Ao clicar na foto ou no nome do estudante, o sistema abre o currículo completo.
@@ -123,6 +124,7 @@ Currículos:
 /site/curriculum/herlan
 /site/curriculum/alan
 /site/curriculum/lucas
+/site/curriculum/jv
 
 Geração de PDF:
 /gerapdf/pedro
@@ -133,6 +135,7 @@ Geração de PDF:
 /gerapdf/herlan
 /gerapdf/alan
 /gerapdf/lucas
+/gerapdf/jv
 
 Os controladores públicos possuem uma lista fechada dos currículos válidos. Assim,
 tentativas de informar outro nome na URL recebem página não encontrada em vez de
@@ -149,6 +152,7 @@ exposição para outros arquivos do projeto.
 - Herlan Daner Palma Condori
 - Alan Jhosmar Rojas Escobar
 - Lucas Zanardo Correia
+- João Victor dos Santos Oliveira
 
 O projeto mantém os dados que os estudantes forneceram nos repositórios. Alguns
 endereços, contatos, nomes de áreas ou informações podem ser fictícios ou servirem
@@ -277,7 +281,7 @@ controlador de PDF.
 - Confirmar nomes, telefones, endereços e endereços de e-mail.
 - Substituir dados fictícios ou improvisados por dados reais somente com autorização.
 - Revisar ortografia e consistência dos objetivos e experiências.
-- Testar o PDF dos oito currículos no navegador.
+- Testar o PDF dos nove currículos no navegador.
 - Testar o projeto em celular e em telas menores.
 - Testar o botão Voltar em todas as páginas.
 - Verificar se as imagens têm qualidade suficiente e formato apropriado.
@@ -296,7 +300,7 @@ controlador de PDF.
 - Criar autenticação somente para edição; manter a consulta pública.
 - Gerar miniaturas otimizadas das fotos.
 - Adicionar texto alternativo específico para cada foto.
-- Criar testes automáticos para verificar a existência dos oito currículos.
+- Criar testes automáticos para verificar a existência dos nove currículos.
 - Criar testes HTTP para validar página inicial, Quem Somos e PDFs.
 - Melhorar o PDF para incluir marca da escola e quebra de página adequada.
 - Criar uma impressão responsiva separada da tela.

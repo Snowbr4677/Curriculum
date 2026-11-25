@@ -250,6 +250,17 @@
                     <p class="aluno-extra"><strong>Área de interesse:</strong> Comunicação digital, tecnologia e aprendizado contínuo.</p>
                     <div style="clear:both;"></div>
                 </article>
+
+                <!-- Card do aluno João Victor dos Santos Oliveira. -->
+                <article class="borda1 aluno-card" tabindex="0">
+                    <h2 class="aluno-nome">João Victor dos Santos Oliveira</h2>
+                    <a href="{{ asset('/site/curriculum/jv') }}" class="aluno-foto-link">
+                        <img src="{{ asset('/imgs/sistema/alunos/jv.jpg') }}" alt="Imagem de perfil escolhida por João Victor" class="aluno-foto" loading="lazy" decoding="async">
+                    </a>
+                    <p>Estudante do Ensino Médio integrado ao Técnico em Desenvolvimento de Sistemas, em busca da primeira oportunidade profissional.</p>
+                    <p class="aluno-extra"><strong>Objetivo:</strong> Jovem Aprendiz ou estágio; inglês intermediário.</p>
+                    <div style="clear:both;"></div>
+                </article>
             </div>
 
             <center class="reg" style="padding:30px 0;">{{ config('app.pkcia') }} &nbsp;{{ \App\Classes\Datas::dataHora() }}</center>

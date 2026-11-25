@@ -18,6 +18,7 @@ class SiteController extends Controller
         'herlan',
         'alan',
         'lucas',
+        'jv',
     ];
 
     public function __construct()
