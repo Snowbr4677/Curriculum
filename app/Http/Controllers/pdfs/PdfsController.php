@@ -14,6 +14,8 @@ class PdfsController extends Controller
         'gui',
         'dri',
         'herlan',
+        'alan',
+        'lucas',
     ];
 
     // Gera somente o currículo público solicitado.

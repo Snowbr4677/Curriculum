@@ -9,7 +9,7 @@
     <link href="{{ asset('imgs/sistema/pk_siga.png') }}" rel="shortcut icon" /></link>
     <title>{{ config('app.name', 'PKCia.Siga') }}</title>
 
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css'])
 
     </head>
 
@@ -72,7 +72,7 @@
             
             <!-- Logo ou título -->
             <a href="" class="text-white font14">
-            <center><img src="{{ asset('imgs/sistema/programadores.png') }}" class="curriculum-logo">
+            <center><img src="{{ asset('imgs/sistema/programadores-small.png') }}" class="curriculum-logo">
                 Escola Dona Zalina Rolim
             </center>
             <b class="text-white font8"></b>
@@ -110,7 +110,7 @@
 
                         <!-- Centro: Imagem -->
                         <div id="image1" class="z-10 shrink-0">
-                            <img class="w-24 md:w-28 lg:w-32" src="{{ asset('/imgs/sistema/alunos/herlan.png') }}" style="border-radius:50%;"/><br>
+                            <img class="w-24 md:w-28 lg:w-32" src="{{ asset('/imgs/sistema/alunos/herlan.jpg') }}" style="border-radius:50%;"/><br>
                         </div>
 
                         <!-- Lado Direito: Dados de Contato -->

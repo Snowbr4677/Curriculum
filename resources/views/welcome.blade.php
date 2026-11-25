@@ -7,7 +7,7 @@
         <title>{{ config('app.name', 'administrativo') }}</title>
 
         <link href="{{ asset('imgs/icones/att.logo.ico') }}" rel="shortcut icon" />
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @vite(['resources/css/app.css'])
         <style>
             /* Tema público da página inicial: visual claro, centralizado e sem login administrativo. */
             body {
@@ -115,9 +115,6 @@
                 <div class="welcome-actions">
                     <a href="{{ route('quemsomos') }}" class="welcome-button">Conhecer os alunos</a>
                 </div>
-                <div class="welcome-status">
-                    @include('components.teste-banco')
-                </div>
             </section>
         </main>
 
@@ -127,4 +124,3 @@
 
     </body>
 </html>
-<script src="{{ asset('js/alpine.js') }}" defer></script>

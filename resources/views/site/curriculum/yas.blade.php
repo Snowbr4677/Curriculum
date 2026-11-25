@@ -9,7 +9,7 @@
     <link href="{{ asset('imgs/sistema/pk_siga.png') }}" rel="shortcut icon" /></link>
     <title>{{ config('app.name', 'PKCia.Siga') }}</title>
 
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css'])
 
     </head>
 
@@ -72,7 +72,7 @@
             
             <!-- Logo ou título -->
             <a href="{{ route('raiz') }}" class="text-white font14">
-                <img src="{{ asset('imgs/sistema/programadores.png') }}" class="curriculum-logo">
+                <img src="{{ asset('imgs/sistema/programadores-small.png') }}" class="curriculum-logo">
                 Escola Dona Zalina Rolim
             </a>
 

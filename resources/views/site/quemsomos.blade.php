@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="{{ asset('imgs/sistema/pk_siga_branco.png') }}" rel="shortcut icon">
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @vite(['resources/css/app.css'])
         <style>
             .topo-fixo {
                 position: sticky;
@@ -150,7 +150,7 @@
         <nav class="py-0 topo-fixo">
             <div class="container mx-auto flex justify-between items-center" style="padding:10px;">
                 <a href="{{ route('raiz') }}" class="marca-escola">
-                    <img src="{{ asset('imgs/sistema/programadores.png') }}" alt="Logo" class="logo-programadores">
+                    <img src="{{ asset('imgs/sistema/programadores-small.png') }}" alt="Logo" class="logo-programadores">
                     <span>Escola Dona Zalina Rolim</span>
                 </a>
                 <a href="{{ route('raiz') }}" class="voltar-quemsomos">&#8592;&nbsp; Voltar</a>
@@ -167,7 +167,7 @@
                 <article class="borda1 aluno-card" tabindex="0">
                     <h2 class="aluno-nome">Pedro Aguiar</h2>
                     <a href="{{ asset('/site/curriculum/pedro') }}" class="aluno-foto-link">
-                        <img src="{{ asset('/imgs/sistema/alunos/pedro.png') }}" alt="Pedro Aguiar" class="aluno-foto">
+                        <img src="{{ asset('/imgs/sistema/alunos/pedro.jpg') }}" alt="Pedro Aguiar" class="aluno-foto" loading="lazy" decoding="async">
                     </a>
                     <p>Profissional voltado para Administração e Compras, com atuação em logística operacional, facilities, cadeia de suprimentos e gestão de processos.</p>
                     <p class="aluno-extra"><strong>Área de interesse:</strong> Administração, compras e logística.</p>
@@ -178,7 +178,7 @@
                 <article class="borda1 aluno-card" tabindex="0">
                     <h2 class="aluno-nome">Yasmim Gameleira</h2>
                     <a href="{{ asset('/site/curriculum/yas') }}" class="aluno-foto-link">
-                        <img src="{{ asset('/imgs/sistema/alunos/yas.jpg') }}" alt="Yasmim Gameleira" class="aluno-foto">
+                        <img src="{{ asset('/imgs/sistema/alunos/yas.jpg') }}" alt="Yasmim Gameleira" class="aluno-foto" loading="lazy" decoding="async">
                     </a>
                     <p>Estudante do Ensino Médio integrado ao curso Técnico em Desenvolvimento de Sistemas, com interesse em tecnologia, sistemas e resolução de problemas.</p>
                     <p class="aluno-extra"><strong>Área de interesse:</strong> Tecnologia e desenvolvimento de sistemas.</p>
@@ -189,7 +189,7 @@
                 <article class="borda1 aluno-card" tabindex="0">
                     <h2 class="aluno-nome">Bruno Leite</h2>
                     <a href="{{ asset('/site/curriculum/bruno') }}" class="aluno-foto-link">
-                        <img src="{{ asset('/imgs/sistema/alunos/bruno.png') }}" alt="Bruno Leite" class="aluno-foto">
+                        <img src="{{ asset('/imgs/sistema/alunos/bruno.webp') }}" alt="Bruno Leite" class="aluno-foto" loading="lazy" decoding="async">
                     </a>
                     <p>Estudante de Desenvolvimento de Sistemas, interessado em lógica de programação, criação e organização de sistemas e aprendizado técnico contínuo.</p>
                     <p class="aluno-extra"><strong>Área de interesse:</strong> Lógica de programação e sistemas.</p>
@@ -200,7 +200,7 @@
                 <article class="borda1 aluno-card" tabindex="0">
                     <h2 class="aluno-nome">Guilherme Souza</h2>
                     <a href="{{ asset('/site/curriculum/gui') }}" class="aluno-foto-link">
-                        <img src="{{ asset('/imgs/sistema/alunos/gui.jpeg') }}" alt="Guilherme Souza" class="aluno-foto">
+                        <img src="{{ asset('/imgs/sistema/alunos/gui.jpg') }}" alt="Guilherme Souza" class="aluno-foto" loading="lazy" decoding="async">
                     </a>
                     <p>Estudante de Desenvolvimento de Sistemas com formação em Python e programação orientada a objetos, buscando iniciar sua trajetória profissional.</p>
                     <p class="aluno-extra"><strong>Área de interesse:</strong> Python e programação orientada a objetos.</p>
@@ -211,7 +211,7 @@
                 <article class="borda1 aluno-card" tabindex="0">
                     <h2 class="aluno-nome">Adrieli Bernal</h2>
                     <a href="{{ asset('/site/curriculum/dri') }}" class="aluno-foto-link">
-                        <img src="{{ asset('/imgs/sistema/alunos/dri.jpg') }}" alt="Adrieli Bernal" class="aluno-foto">
+                        <img src="{{ asset('/imgs/sistema/alunos/dri.jpg') }}" alt="Adrieli Bernal" class="aluno-foto" loading="lazy" decoding="async">
                     </a>
                     <p>Estudante do Ensino Médio, proativa e organizada, com espanhol fluente, inglês básico e experiência prática em supermercado.</p>
                     <p class="aluno-extra"><strong>Idiomas:</strong> Espanhol fluente e inglês básico.</p>
@@ -222,10 +222,32 @@
                 <article class="borda1 aluno-card" tabindex="0">
                     <h2 class="aluno-nome">Herlan Daner Palma Condori</h2>
                     <a href="{{ asset('/site/curriculum/herlan') }}" class="aluno-foto-link">
-                        <img src="{{ asset('/imgs/sistema/alunos/herlan.png') }}" alt="Herlan Daner Palma Condori" class="aluno-foto">
+                        <img src="{{ asset('/imgs/sistema/alunos/herlan.jpg') }}" alt="Herlan Daner Palma Condori" class="aluno-foto" loading="lazy" decoding="async">
                     </a>
                     <p>Estudante de informática com interesse em Python, criação de jogos e arte digital.</p>
                     <p class="aluno-extra"><strong>Área de interesse:</strong> Python, jogos e criação visual.</p>
+                    <div style="clear:both;"></div>
+                </article>
+
+                <!-- Card do aluno Alan Jhosmar Rojas Escobar. -->
+                <article class="borda1 aluno-card" tabindex="0">
+                    <h2 class="aluno-nome">Alan Jhosmar Rojas Escobar</h2>
+                    <a href="{{ asset('/site/curriculum/alan') }}" class="aluno-foto-link">
+                        <img src="{{ asset('/imgs/sistema/alunos/alan.jpeg') }}" alt="Alan Jhosmar Rojas Escobar" class="aluno-foto" loading="lazy" decoding="async">
+                    </a>
+                    <p>Estudante de Desenvolvimento de Sistemas com interesse em programação, jogos e empreendedorismo.</p>
+                    <p class="aluno-extra"><strong>Área de interesse:</strong> Python, lógica de programação e criação de um negócio próprio.</p>
+                    <div style="clear:both;"></div>
+                </article>
+
+                <!-- Card do aluno Lucas Zanardo Correia. -->
+                <article class="borda1 aluno-card" tabindex="0">
+                    <h2 class="aluno-nome">Lucas Zanardo Correia</h2>
+                    <a href="{{ asset('/site/curriculum/lucas') }}" class="aluno-foto-link">
+                        <img src="{{ asset('/imgs/sistema/alunos/lucas.jpg') }}" alt="Lucas Zanardo Correia" class="aluno-foto" loading="lazy" decoding="async">
+                    </a>
+                    <p>Estudante da Escola Dona Zalina Rolim em busca da primeira oportunidade profissional, com interesse em tecnologia e marketing digital.</p>
+                    <p class="aluno-extra"><strong>Área de interesse:</strong> Comunicação digital, tecnologia e aprendizado contínuo.</p>
                     <div style="clear:both;"></div>
                 </article>
             </div>
