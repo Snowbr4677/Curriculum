@@ -34,6 +34,7 @@ complemento técnico e não substitui o documento do TCC.
 3. TECNOLOGIAS UTILIZADAS
 
 - PHP 8.2 ou superior
+- Extensão GD do PHP para processar imagens nos PDFs
 - Laravel 11
 - Blade
 - Tailwind CSS
